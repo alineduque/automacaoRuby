@@ -12,14 +12,14 @@ describe ContaPoupanca do
             end
 
             it 'entao atualiza o saldo' do
-                expect(@cp.saldo).to eql 800.00
+                expect(@cp.saldo).to eql 798.00
                 
             end    
 
         end
 
 
-        context 'quando o saldo é insuficiente'do
+        context 'quando o saldo é zero'do
             before(:all) do
                 @cp = ContaPoupanca.new(0.00)
                 @cp.saca(100.00)
